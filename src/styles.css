@@ -1,0 +1,391 @@
+/* -------------------------------------------------- */
+/* 🌐 GLOBALE RESET OG BASISOPPSETT */
+/* -------------------------------------------------- */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background: #f9fafb;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* -------------------------------------------------- */
+/* 🔐 LOGIN-SIDE */
+/* -------------------------------------------------- */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #f9fafb;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  text-align: center;
+}
+
+.login-card input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.login-card input:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+}
+
+.login-card button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.login-card button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.login-card .forgot {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* -------------------------------------------------- */
+/* 📦 APP-CONTAINER OG KORT-KOMPONENTER */
+/* -------------------------------------------------- */
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.theme-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* -------------------------------------------------- */
+/* 🧾 SKJEMA OG INPUT-GRUPPER */
+/* -------------------------------------------------- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+}
+
+.input-group button {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.input-group button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------------------------- */
+/* 📋 LISTEVISNING */
+/* -------------------------------------------------- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+ul li button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+/* -------------------------------------------------- */
+/* 🧭 TOPP-NAVIGASJON (HEADER) */
+/* -------------------------------------------------- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #111;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.header-left .logo {
+  height: 40px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.user-info {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.logout-button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  background-color: #c53030;
+}
+
+@media (max-width: 500px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .header-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  ul li button {
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------------- */
+/* 📱 JOBBVAREUTTAK MOBILOPTIMALISERT */
+/* -------------------------------------------------- */
+.jobbkort-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.jobbkort {
+  width: 100%;
+  max-width: none;
+  padding: 1rem;
+  background: white;
+  min-height: 100vh;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media (min-width: 768px) {
+  .jobbkort {
+    max-width: 700px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-height: auto;
+  }
+
+  .jobbkort-container {
+    align-items: center;
+    padding: 2rem;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+  outline: none;
+}
+
+.icon-button {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0 6px 6px 0;
+  background: #eee;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.vareliste {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.varekort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.varedetaljer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.antall-justering {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.antall-justering button {
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.antall-kontroller {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* -------------------------------------------------- */
+/* 🔔 VARSEL OG VIDEO */
+/* -------------------------------------------------- */
+.popup-message {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.video-stream {
+  width: 100%;
+  max-height: 240px;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* -------------------------------------------------- */
+/* 🔤 TEKST OG HJELPEKLASSER */
+/* -------------------------------------------------- */
+.text-centered {
+  text-align: center;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}

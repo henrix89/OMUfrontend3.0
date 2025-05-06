@@ -1,0 +1,98 @@
+/* Generelle stylinger for root admin skjemaet */
+.root-admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f4f4f9; /* Lys bakgrunnsfarge */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .root-admin-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px; /* Runde hjørner for skjemaet */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lett skygge for dybde */
+    width: 1200px; /* Bredde tilpasset for PC-skjerm */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Mer luft mellom seksjonene */
+  }
+  
+  .root-admin-form h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* To-kolonnes layout */
+  .form-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .form-column {
+    width: 48%; /* Juster bredden på hver kolonne */
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .input-field:focus {
+    border-color: #3f80ff;
+    outline: none;
+  }
+  
+  .action-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3f80ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .action-button:hover {
+    background-color: #357ae8; /* Mørkere blå på hover */
+  }
+  
+  .user-list,
+  .verksted-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-list li,
+  .verksted-list li {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  

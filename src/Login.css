@@ -1,0 +1,67 @@
+/* Generelle stylinger for login-skjemaet */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9; /* Lys bakgrunnsfarge */
+  }
+  
+  .login-form {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 10px; /* Runde hjørner for skjemaet */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lett skygge for dybde */
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-logo {
+    width: 150px; /* Juster logoens størrelse */
+    margin-bottom: 20px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Runde kanter for input-feltene */
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .input-field:focus {
+    border-color: #3f80ff;
+    outline: none;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3f80ff;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Runde kanter for knappen */
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: #357ae8; /* Mørkere blå på hover */
+  }
+  
+  select.input-field {
+    cursor: pointer;
+  }
+  
